@@ -59,5 +59,5 @@
     inputs.caelestia-shell.packages.${pkgs.system}.with-cli
   ];
 
-  system.stateVersion = "26.05";
+  system.stateVersion = "26.11";
 }
