@@ -74,13 +74,11 @@
     jack.enable = true;
   };
 
-  # Se cambió a "kde" para que TODAS las apps Qt hereden el tema oscuro global
   qt = {
     enable = true;
     platformTheme = "gtk2";
   };
 
-  # Base de datos global de KDE para asegurar letras blancas en todas las apps Qt
   environment.etc."xdg/kdeglobals".text = ''
     [General]
     ColorScheme=BreezeDark
@@ -99,7 +97,6 @@
     config.common.default = [ "hyprland" "gtk" ];
   };
 
-  # Configuración global para aplicaciones GTK (Gnome/Thunar/etc)
   programs.dconf.profiles.user.databases = [{
     settings = with lib.gvariant; {
       "org/gnome/desktop/interface" = {
